@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 75e3a10c5340e664dbe931a290297504
+  - enabled: 1
+    path: Assets/Scenes/Endless.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: f51ae8aa4b6f23f438eac84130b92c28
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 1cdf635ec9fd6ac4a8b16a8ae4866f66
+  - enabled: 1
+    path: Assets/Scenes/Highscore.unity
+    guid: f1c83f25be3184b47865808cff2b5356
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c29497eebffa6a54f97006ae207f8b0b
+  - enabled: 1
+    path: Assets/Scenes/Gamemode.unity
+    guid: 76bd3f95542a1a940a2b5999a81a39e0
+  - enabled: 1
+    path: Assets/Scenes/Campaign.unity
+    guid: 76cbeb63de0a0c34da3deb45b93ac904
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 6089b8c68d5be424180eaccd17bff566
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 63b31bb481e294446ae0282e11e11cb2
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: c2025e7e9abe0c145b5415e2e2817734
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: f2e85ede1fb4a6a44ac2909e2a6a91f9
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: b21aa6e7502442740b1b059ceb7331c8
+  m_configObjects: {}
