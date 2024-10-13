@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour
     public bool allowButtonHold;
 
     // Current Gun
-    public int currentGun = 4;
+    public int currentGun;
     public int bulletsLeft, bulletsShot;
 
     //bools

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15012,6 +15011,10 @@ PrefabInstance:
       propertyPath: gunnName
       value: 
       objectReference: {fileID: 984501692}
+    - target: {fileID: 5511419388649844111, guid: 2701cc87020fdc145888dff89595caed, type: 3}
+      propertyPath: gunNumber
+      value: 
+      objectReference: {fileID: 780243715}
     - target: {fileID: 5511419388649844111, guid: 2701cc87020fdc145888dff89595caed, type: 3}
       propertyPath: gameManager
       value: 

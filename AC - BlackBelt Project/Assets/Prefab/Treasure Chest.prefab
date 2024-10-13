@@ -183,7 +183,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 19107e281dd207845abb9086647652f3, type: 2}
   - {fileID: 11400000, guid: 431f809c56eb237439b7f0895a86a30d, type: 2}
   gun: {fileID: 0}
-  gunNumber: {fileID: 8491433070711565223, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
+  gunNumber: {fileID: 0}
   weaponModel:
   - {fileID: 919132149155446097, guid: 769cab20c4fe87741a6a68a24a6f90ab, type: 3}
   - {fileID: 919132149155446097, guid: 587ff9607c111d443ac1beefcc1ce374, type: 3}

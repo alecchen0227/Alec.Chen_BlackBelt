@@ -27,6 +27,7 @@ public class WeaponManager : MonoBehaviour
         weaponModel[4].SetActive(true);
         weaponModel[5].SetActive(false);
         gunnName.text = gunTypes[4].gunName;
+        gunNumber.currentGun = 4;
         gun.GetComponent<Gun>().timeBetweenShooting = gunTypes[4].timeBetweenShooting;
         gun.GetComponent<Gun>().startingSpread = gunTypes[4].startingSpread;
         gun.GetComponent<Gun>().currentSpread = gunTypes[4].currentSpread;
@@ -77,6 +78,7 @@ public class WeaponManager : MonoBehaviour
                 gun.GetComponent<Gun>().damageValue = gunTypes[option].damageValue;
                 gun.GetComponent<Gun>().numberOfBullets = gunTypes[option].numberOfBullets;
                 gunNumber.currentGun = option;
+                print(gunNumber.currentGun);
                 gameManager.money -= 100;
                 Timer += 5;
             }
