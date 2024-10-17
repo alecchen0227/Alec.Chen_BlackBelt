@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3758,7 +3759,7 @@ MonoBehaviour:
   - {fileID: 480768152}
   largeEnemy: {fileID: 216465541864151660, guid: d13590c25e286b940a58f73a7e8397f9, type: 3}
   waveNumber: 1
-  timerChanger: 5
+  timerChanger: 3
   wave: {fileID: 1912605405}
   zombiesKilled: 0
   numberOfBiggies: 1
@@ -6890,7 +6891,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 811f0963da3f44dbe92cb45594941685, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11958,7 +11959,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1

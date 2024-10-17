@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject largeEnemy;
     float timer = 0;
     public int waveNumber = 1;
-    public float timerChanger = 5f;
+    public float timerChanger;
     public TMP_Text wave;
     public int zombiesKilled = 0;
     public int numberOfBiggies = 1;
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
         }
         else if(scene.name == "Level 2")
         {
-            wave.text = "Reach 1000 points to win!";
+            wave.text = "Reach 500 points to win!";
         }
         else if(scene.name == "Level 3")
         {
-            wave.text = "Reach 1500 points to win!";
+            wave.text = "Reach 500 points to win!";
         }
         else
         {
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (scene.name == "Level 2" && scoreNumber >= 1000)
+        else if (scene.name == "Level 2" && scoreNumber >= 500)
         {
             PlayerPrefs.SetInt("Level2Finish", 1);
             PlayerPrefs.SetInt("Button", 0);
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (scene.name == "Level 3" && scoreNumber >= 1500)
+        else if (scene.name == "Level 3" && scoreNumber >= 500)
         {
             PlayerPrefs.SetInt("Level3Finish", 1);
             PlayerPrefs.SetInt("Button", 1);

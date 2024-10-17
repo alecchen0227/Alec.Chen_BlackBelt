@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4527,7 +4528,7 @@ MonoBehaviour:
   - {fileID: 480768152}
   largeEnemy: {fileID: 216465541864151660, guid: 06abfe653718f7e498089fe531a03562, type: 3}
   waveNumber: 1
-  timerChanger: 5
+  timerChanger: 4
   wave: {fileID: 1912605405}
   zombiesKilled: 0
   numberOfBiggies: 1
