@@ -21,10 +21,13 @@ public class MasterVolume : MonoBehaviour
     void Update()
     {
         volumeValue.text = ""+volumeSlider.value;
+       // AudioListener.volume = Volume;
     }
 
-    public void adjustVolume()
+    public void adjustVolume(float volume)
     {
-        PlayerPrefs.SetFloat("volume", volumeSlider.value);
+        PlayerPrefs.SetFloat("volume", volume);
+        AudioListener.volume = volume;
+
     }
 }

@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
         if(scene.name == "Level 1" || scene.name == "Level 2" || scene.name == "Level 3" || scene.name == "Endless")
         {
             source.Pause();
