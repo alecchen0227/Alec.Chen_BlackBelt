@@ -177,7 +177,6 @@ public class Gun : MonoBehaviour
             allowInvoke = false;
         }
     }
-
     private void ResetShot()
     {
         readyToShoot = true;

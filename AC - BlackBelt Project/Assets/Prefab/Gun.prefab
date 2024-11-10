@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8491433070711565223}
   - component: {fileID: 2423315638206368241}
   - component: {fileID: 1829857922427596749}
+  - component: {fileID: 1163926862728000524}
   m_Layer: 0
   m_Name: Gun
   m_TagString: projectile
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotate: {fileID: 0}
+  gun: {fileID: 3803457739624616294}
 --- !u!82 &1829857922427596749
 AudioSource:
   m_ObjectHideFlags: 0
@@ -260,6 +262,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1163926862728000524
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803457739624616294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cea75f91c7cfa74418a9a62b43e570db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8427589508133711983
 GameObject:
   m_ObjectHideFlags: 0
