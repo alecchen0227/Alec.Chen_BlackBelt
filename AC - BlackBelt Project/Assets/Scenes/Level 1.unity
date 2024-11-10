@@ -13988,6 +13988,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a0831a813d16efb41af0be594222c69b, type: 3}
   m_PrefabInstance: {fileID: 1967512975}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1976062203 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2266698226737835875, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
+  m_PrefabInstance: {fileID: 4111625463004424311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976166325 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 2b96daa4395f39b42a1afba1552216fc, type: 3}
@@ -14904,6 +14909,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 290652856}
     m_Modifications:
+    - target: {fileID: 2266698226737835875, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.53
+      objectReference: {fileID: 0}
     - target: {fileID: 2423315638206368241, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
       propertyPath: rotate
       value: 
@@ -14956,6 +14965,10 @@ PrefabInstance:
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8491433070711565223, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1976062203}
     - target: {fileID: 8491433070711565223, guid: 678fe4f0cd5a9944ca859572cc7da8d9, type: 3}
       propertyPath: weaponManager
       value: 

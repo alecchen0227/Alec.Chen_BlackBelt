@@ -149,8 +149,26 @@ public class Gun : MonoBehaviour
             // Calculate new direction with spread
             Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0); // Add spread
 
+            GameObject currentBullet;
             // Instantiate bullet/projectile
-            GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
+            if (Input.GetMouseButtonDown(1))
+            {
+                currentBullet = Instantiate(bullet, new Vector3(attackPoint.position.x, attackPoint.position.y-0.1f, attackPoint.position.z+2), Quaternion.identity);
+                Instantiate(muzzleFlash, new Vector3(attackPoint.position.x + 5, attackPoint.position.y - 10, attackPoint.position.z + 50), Quaternion.identity);
+                print(attackPoint.position.x + 5);
+                print(attackPoint.position.y - 10);
+                print(attackPoint.position.z + 50);
+            }
+            else
+            {
+                print(Input.GetMouseButtonDown(1));
+                currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
+                Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+                print(attackPoint.position.x);
+                print(attackPoint.position.y);
+                print(attackPoint.position.z);
+            }
+
 
             // Rotate bullet to shoot direction
             currentBullet.transform.forward = directionWithSpread.normalized;
@@ -162,10 +180,6 @@ public class Gun : MonoBehaviour
         }
         
         // Instantiate muzzle flash, if you have one
-        if(muzzleFlash != null)
-        {
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-        }
 
         bulletsLeft--;
         bulletsShot++;
