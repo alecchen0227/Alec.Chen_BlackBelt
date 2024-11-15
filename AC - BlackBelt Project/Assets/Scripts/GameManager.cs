@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     /*
      Increase score when an enemy dies from projectile
     */
-
     public TMP_Text score;
     public int scoreNumber;
     public Scene scene;
@@ -34,28 +33,27 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.GetInt("Level1Finish", 0);
         PlayerPrefs.GetInt("Level2Finish", 0);
         PlayerPrefs.GetInt("Level3Finish", 0);
-        if (scene.name == "Level 1")
+        if(scene.name == "Endless")
         {
-            wave.text = "Reach 500 points to win!";
-        }
-        else if(scene.name == "Level 2")
-        {
-            wave.text = "Reach 500 points to win!";
-        }
-        else if(scene.name == "Level 3")
-        {
-            wave.text = "Reach 500 points to win!";
+            Invoke("waveDisappear", 3);
         }
         else
         {
-            Invoke("waveDisappear", 3);
+            wave.text = "";
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + scoreNumber;
+        if(scene.name == "Endless")
+        {
+            score.text = "Score: " + scoreNumber;
+        }
+        else
+        {
+            score.text = "Score: " + scoreNumber + "/500";
+        }
     }
 
     // Update is called once per frame

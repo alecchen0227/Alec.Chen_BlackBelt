@@ -129,6 +129,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8fb00ca048674372b2223b7378f4460, type: 3}
   - {fileID: 8300000, guid: 6355f914973924103b21e248444ecfb5, type: 3}
   - {fileID: 8300000, guid: 14473cf0621f64832b30c822c759815e, type: 3}
+  staminaBar: {fileID: 0}
 --- !u!114 &7133314700117861489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +264,7 @@ GameObject:
   - component: {fileID: 6923884326076532535}
   - component: {fileID: 1253678169033446717}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Flashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +300,7 @@ Light:
   m_Intensity: 5
   m_Range: 30
   m_SpotAngle: 48
-  m_InnerSpotAngle: 4
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2

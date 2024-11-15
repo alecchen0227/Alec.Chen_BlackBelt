@@ -26,8 +26,7 @@ public class healthBox : MonoBehaviour
             {
                 Instantiate(noiseMaker, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                touchingHeart.health++;
-                touchingHeart.hearts[touchingHeart.health].SetActive(true);
+                touchingHeart.health+=0.125f;
             }
         }
     }

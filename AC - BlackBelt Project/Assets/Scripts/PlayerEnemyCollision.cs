@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerEnemyCollision : MonoBehaviour
 {
     public GameManager gameManager;
-    public GameObject[] hearts;
-    public int health = 7;
+    public float health = 1;
     public float timer = 0;
     public Scene scene;
+    public Image healthbar;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +26,14 @@ public class PlayerEnemyCollision : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(health < 0)
+        if(health <= 0)
         {
             checkScore();
             SceneManager.LoadScene(11);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        healthbar.fillAmount = health;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -40,8 +42,7 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             if(timer >= 1)
             {
-                hearts[health].SetActive(false);
-                health--;
+                health -= 0.125f;
                 timer = 0;
             }
         }
@@ -50,10 +51,7 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             if (timer >= 1)
             {
-                hearts[health].SetActive(false);
-                health--;
-                hearts[health].SetActive(false);
-                health--;
+                health-=0.25f;
                 timer = 0;
             }
         }
