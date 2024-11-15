@@ -6,7 +6,7 @@ using TMPro;
 public class EnemyHPLarge : MonoBehaviour
 {
     GameManager gameManager;
-    int hp = 500;
+    public int hp;
     public GameObject healthbox;
     public PlayerEnemyCollision checker;
     public ParticleSystem particles;

@@ -34,7 +34,6 @@ public class WeaponManager : MonoBehaviour
         gun.GetComponent<Gun>().spreadMultiplier = gunTypes[4].spreadMultiplier;
         gun.GetComponent<Gun>().maxSpread = gunTypes[4].maxSpread;
         gun.GetComponent<Gun>().reloadTime = gunTypes[4].reloadTime;
-        gun.GetComponent<Gun>().timeBetweenShots = gunTypes[4].timeBetweenShots;
         gun.GetComponent<Gun>().magazineSize = gunTypes[4].magazineSize;
         gun.GetComponent<Gun>().damageValue = gunTypes[4].damageValue;
         gun.GetComponent<Gun>().numberOfBullets = gunTypes[4].numberOfBullets;
@@ -72,13 +71,11 @@ public class WeaponManager : MonoBehaviour
                 gun.GetComponent<Gun>().spreadMultiplier = gunTypes[option].spreadMultiplier;
                 gun.GetComponent<Gun>().maxSpread = gunTypes[option].maxSpread;
                 gun.GetComponent<Gun>().reloadTime = gunTypes[option].reloadTime;
-                gun.GetComponent<Gun>().timeBetweenShots = gunTypes[option].timeBetweenShots;
                 gun.GetComponent<Gun>().magazineSize = gunTypes[option].magazineSize;
                 gun.GetComponent<Gun>().bulletsLeft = gunTypes[option].magazineSize;
                 gun.GetComponent<Gun>().damageValue = gunTypes[option].damageValue;
                 gun.GetComponent<Gun>().numberOfBullets = gunTypes[option].numberOfBullets;
                 gunNumber.currentGun = option;
-                print(gunNumber.currentGun);
                 gameManager.money -= 100;
                 Timer += 5;
             }

@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Wide Ray
   m_EditorClassIdentifier: 
   gunName: Wide Ray
-  timeBetweenShooting: 1
+  timeBetweenShooting: 1.5
   startingSpread: 1
   currentSpread: 1
   spreadMultiplier: 0.5
   maxSpread: 3
-  reloadTime: 3
-  timeBetweenShots: 1
+  reloadTime: 4
   magazineSize: 8
   damageValue: 15
   numberOfBullets: 12

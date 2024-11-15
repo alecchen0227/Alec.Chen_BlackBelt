@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2e383717023804c9835df705918dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 250
   healthbox: {fileID: 5820861929234524508, guid: a683fee0658ea444db14d75431525049, type: 3}
   checker: {fileID: 0}
   particles: {fileID: 2540210270500267697}

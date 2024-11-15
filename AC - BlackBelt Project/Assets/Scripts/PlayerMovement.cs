@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
     private int stepCounter;
 
+    public Image staminaBar;
+    float staminaAmount = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        changeStaminaBar();
     }
 
     private void MyInput()
@@ -87,9 +92,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeSpeed()
     {
-        if(Input.GetKey(shiftKey))
+        if(Input.GetKey(shiftKey) && staminaAmount > 0)
         {
             moveSpeed = 14;
+            if(staminaAmount > 0)
+            {
+                staminaAmount -= 0.2f*Time.deltaTime;
+            }
         }
         else
         {
@@ -133,6 +142,15 @@ public class PlayerMovement : MonoBehaviour
             }
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+    private void changeStaminaBar()
+    {
+        staminaBar.fillAmount = staminaAmount;
+        if (!Input.GetKey(shiftKey) && staminaAmount < 1)
+        {
+            staminaAmount += 0.1f*Time.deltaTime;
         }
     }
 

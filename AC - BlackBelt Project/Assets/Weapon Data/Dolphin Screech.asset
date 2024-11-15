@@ -18,8 +18,7 @@ MonoBehaviour:
   currentSpread: 0
   spreadMultiplier: 0.05
   maxSpread: 1
-  reloadTime: 3.46
-  timeBetweenShots: 0.05
+  reloadTime: 3.5
   magazineSize: 25
   damageValue: 15
   numberOfBullets: 1

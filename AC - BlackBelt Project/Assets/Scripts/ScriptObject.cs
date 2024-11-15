@@ -10,7 +10,6 @@ public class ScriptObject : ScriptableObject
     public float spreadMultiplier;
     public float maxSpread;
     public float reloadTime;
-    public float timeBetweenShots;
     public int magazineSize;
     public int damageValue;
     public int numberOfBullets;
