@@ -20,7 +20,7 @@ public class MasterVolume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        volumeValue.text = ""+volumeSlider.value;
+        volumeValue.text = ""+Mathf.Round(volumeSlider.value*100);
        // AudioListener.volume = Volume;
     }
 

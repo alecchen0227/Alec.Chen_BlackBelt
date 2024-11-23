@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -43.107414, w: 0}
+  m_margin: {x: 0, y: 0, z: -137.45343, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4305,7 +4305,7 @@ MonoBehaviour:
   - {fileID: 480768152}
   largeEnemy: {fileID: 216465541864151660, guid: 06abfe653718f7e498089fe531a03562, type: 3}
   waveNumber: 1
-  timerChanger: 4
+  timerChanger: 5
   wave: {fileID: 1912605405}
   zombiesKilled: 0
   numberOfBiggies: 1

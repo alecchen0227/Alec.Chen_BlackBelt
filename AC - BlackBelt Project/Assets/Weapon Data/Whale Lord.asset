@@ -20,5 +20,5 @@ MonoBehaviour:
   maxSpread: 1.25
   reloadTime: 5
   magazineSize: 100
-  damageValue: 12
+  damageValue: 20
   numberOfBullets: 1
