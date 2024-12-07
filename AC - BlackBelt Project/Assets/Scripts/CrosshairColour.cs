@@ -13,6 +13,12 @@ public class CrosshairColour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         redNumber = PlayerPrefs.GetFloat("red");
         greenNumber = PlayerPrefs.GetFloat("green");
         blueNumber = PlayerPrefs.GetFloat("blue");
@@ -24,11 +30,5 @@ public class CrosshairColour : MonoBehaviour
         crosshair[5].GetComponent<Image>().color = new Color(redNumber, greenNumber, blueNumber);
         crosshair[6].GetComponent<Image>().color = new Color(redNumber, greenNumber, blueNumber);
         crosshair[7].GetComponent<Image>().color = new Color(redNumber, greenNumber, blueNumber);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

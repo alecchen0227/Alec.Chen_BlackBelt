@@ -105,12 +105,12 @@ public class Gun : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
 
         // shooting
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && Pause.pauseCondition)
         {
             //Set bullets shot to 0
             bulletsShot = 0;
 
-            shoot();
+            shoot(); 
         }
     }
 
