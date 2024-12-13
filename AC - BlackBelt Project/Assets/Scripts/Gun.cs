@@ -100,7 +100,7 @@ public class Gun : MonoBehaviour
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
         // Reloading
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading && Pause.pauseCondition) Reload();
         // Reload automatically when trying to shoot without ammo
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
 

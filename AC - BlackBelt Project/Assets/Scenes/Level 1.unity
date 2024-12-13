@@ -1006,17 +1006,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300010, guid: d454052e46cc5cd449ddb66f18c6c3a5, type: 3}
---- !u!114 &133627962 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7802081181176143855, guid: a225e6e64ccd70b4da5fc47704c1be73, type: 3}
-  m_PrefabInstance: {fileID: 2810046133825658380}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &138603077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4383,9 +4372,9 @@ MonoBehaviour:
   - {fileID: 1363916455}
   - {fileID: 480768152}
   largeEnemy: {fileID: 216465541864151660, guid: 3a57041045cac10468a93aa41bd29ad4, type: 3}
+  scroll: {fileID: 0}
   waveNumber: 1
   timerChanger: 9
-  wave: {fileID: 133627962}
   zombiesKilled: 0
   numberOfBiggies: 1
   money: 0
@@ -10152,6 +10141,10 @@ PrefabInstance:
     - target: {fileID: 7133314700117861489, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
       propertyPath: hearts.Array.data[7]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522104012393871395, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

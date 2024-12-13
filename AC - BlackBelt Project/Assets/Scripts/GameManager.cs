@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject enemies;
     public GameObject[] spawner;
     public GameObject largeEnemy;
+    public GameObject scroll;
     float timer = 0;
     public int waveNumber = 1;
     public float timerChanger;
-    public TMP_Text wave;
     public int zombiesKilled = 0;
     public int numberOfBiggies = 1;
     public int money = 0;
@@ -33,16 +34,19 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.GetInt("Level1Finish", 0);
         PlayerPrefs.GetInt("Level2Finish", 0);
         PlayerPrefs.GetInt("Level3Finish", 0);
-        if(scene.name == "Endless")
+        if(scroll != null)
         {
-            Invoke("waveDisappear", 3);
-        }
-        else
-        {
-            wave.text = "";
+            Invoke("removeScroll", 10);
         }
     }
 
+    void removeScroll()
+    {
+        scroll.SetActive(false);
+    }
+    //getridofmsg
+    // if(goal != null)
+    // goal.Setactive(false)
     // Update is called once per frame
     void Update()
     {
@@ -72,7 +76,6 @@ public class GameManager : MonoBehaviour
             if (zombiesKilled == waveNumber * 10)
             {
                 waveNumber++;
-                wave.text = "Wave " + waveNumber;
                 timerChanger -= 0.2f;
                 Invoke("waveDisappear", 3);
                 if (waveNumber % 5 == 0)
@@ -144,9 +147,5 @@ public class GameManager : MonoBehaviour
         {
              Instantiate(enemies, spawner[spawnerNumber].transform.position, Quaternion.identity);
         }
-    }
-    public void waveDisappear()
-    {
-        wave.text = null;
     }
 }

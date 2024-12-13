@@ -15,16 +15,16 @@ public class PlayerCam : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        sens = PlayerPrefs.GetFloat("currentSensitivity", 200);
         //Lock and Hide the Cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
     }
 
     // Update is called once per frame
     void Update()
-    { 
+    {
+        // Update the new mouse sensitivity
+        sens = PlayerPrefs.GetFloat("currentSensitivity", 200);
         // Get Mouse Input
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens;
