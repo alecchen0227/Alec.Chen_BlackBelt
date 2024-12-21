@@ -4374,7 +4374,7 @@ MonoBehaviour:
   largeEnemy: {fileID: 216465541864151660, guid: 3a57041045cac10468a93aa41bd29ad4, type: 3}
   scroll: {fileID: 0}
   waveNumber: 1
-  timerChanger: 9
+  timerChanger: 5
   zombiesKilled: 0
   numberOfBiggies: 1
   money: 0

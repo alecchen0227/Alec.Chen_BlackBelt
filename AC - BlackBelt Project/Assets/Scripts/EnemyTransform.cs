@@ -14,6 +14,6 @@ public class EnemyTransform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transformObject.position;
+        transform.position = transformObject.position; 
     }
 }

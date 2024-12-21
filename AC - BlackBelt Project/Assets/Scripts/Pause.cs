@@ -20,7 +20,7 @@ public class Pause : MonoBehaviour
         {
             if (pauseCondition)
             {
-                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 pauseCondition = false;
                 pause.SetActive(true);
@@ -45,6 +45,7 @@ public class Pause : MonoBehaviour
     public void returnToMainMenu()
     {
         SceneManager.LoadScene(0);
+        pauseCondition = true;
         Time.timeScale = 1;
     }
 }

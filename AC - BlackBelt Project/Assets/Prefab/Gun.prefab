@@ -137,8 +137,7 @@ MonoBehaviour:
   spreadMultiplier: 0
   maxSpread: 0
   reloadTime: 3
-  timeBetweenShots: 0.1
-  magazineSize: 9
+  magazineSize: 12
   damageValue: 30
   numberOfBullets: 1
   allowButtonHold: 1

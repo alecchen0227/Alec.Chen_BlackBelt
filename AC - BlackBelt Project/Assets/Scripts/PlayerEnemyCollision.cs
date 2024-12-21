@@ -8,7 +8,7 @@ public class PlayerEnemyCollision : MonoBehaviour
 {
     public GameManager gameManager;
     public float health = 1;
-    public float timer = 0;
+    public static float timer = 0;
     public Scene scene;
     public Image healthbar;
     // Start is called before the first frame update
@@ -36,22 +36,22 @@ public class PlayerEnemyCollision : MonoBehaviour
         healthbar.fillAmount = health;
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            if(timer >= 1)
+            if (timer >= 1)
             {
                 health -= 0.125f;
                 timer = 0;
             }
         }
 
-        if(collision.gameObject.CompareTag("Biggy"))
+        if (other.gameObject.CompareTag("Biggy"))
         {
             if (timer >= 1)
             {
-                health-=0.25f;
+                health -= 0.25f;
                 timer = 0;
             }
         }

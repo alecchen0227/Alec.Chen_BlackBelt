@@ -18,9 +18,9 @@ public class Orc_Attack : MonoBehaviour
         
     }
 
-    public void OnCollisionStay(Collision collision)
+    public void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player"))
         {
             random = Random.Range(0, 3);
             switch (random)

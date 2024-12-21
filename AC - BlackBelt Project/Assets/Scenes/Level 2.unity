@@ -11268,6 +11268,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fountain1
       objectReference: {fileID: 0}
+    - target: {fileID: 124066, guid: 3aea2b1d4d0db3542af1e9d3474cf6fe, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 124066, guid: 3aea2b1d4d0db3542af1e9d3474cf6fe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 408914, guid: 3aea2b1d4d0db3542af1e9d3474cf6fe, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
