@@ -11,6 +11,7 @@ public class PlayerEnemyCollision : MonoBehaviour
     public static float timer = 0;
     public Scene scene;
     public Image healthbar;
+    public Image redTint;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,7 @@ public class PlayerEnemyCollision : MonoBehaviour
             if (timer >= 1)
             {
                 health -= 0.25f;
+                redTint.color.a = 1;
                 timer = 0;
             }
         }
