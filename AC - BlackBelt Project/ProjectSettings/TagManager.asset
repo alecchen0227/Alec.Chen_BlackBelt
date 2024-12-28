@@ -13,6 +13,7 @@ TagManager:
   - SecondCamera
   - BulletSpawn
   - Audio
+  - canvas
   layers:
   - Default
   - TransparentFX

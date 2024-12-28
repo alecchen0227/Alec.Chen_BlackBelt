@@ -11,12 +11,14 @@ public class EnemyHPLarge : MonoBehaviour
     public PlayerEnemyCollision checker;
     public ParticleSystem particles;
     public ParticleSystem deathParticles;
+    public VisualIndicator visualIndicator;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = Object.FindObjectOfType<GameManager>();
         checker = Object.FindObjectOfType<PlayerEnemyCollision>();
+        visualIndicator = Object.FindObjectOfType<VisualIndicator>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class EnemyHPLarge : MonoBehaviour
             {
                 Instantiate(healthbox, transform.position, Quaternion.identity);
             }
+            visualIndicator.spawnTextBig();
             die();
             gameManager.scoreNumber += 50;
             gameManager.money += 50;

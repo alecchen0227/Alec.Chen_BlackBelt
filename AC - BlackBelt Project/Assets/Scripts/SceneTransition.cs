@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     public GameObject loading;
+    public int returnToThisScene;
+    public GameObject backButton;
     public enum LevelNumbers {
             Level1 = 8,
             Level2 = 9
@@ -15,7 +17,18 @@ public class SceneTransition : MonoBehaviour
 
     public void Start()
     {
-        loading.SetActive(false);
+        if(loading != null)
+        {
+            loading.SetActive(false);
+        }
+    }
+
+    public void Update()
+    {
+        if (backButton != null && Input.GetKeyDown(KeyCode.Escape))
+        {
+            loadLevel(returnToThisScene);
+        }
     }
 
     public void loadLevel(int index)

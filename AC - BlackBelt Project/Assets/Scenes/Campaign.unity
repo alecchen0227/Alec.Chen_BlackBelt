@@ -1661,6 +1661,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e05bba2fdc074c8979d55bb57dd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loading: {fileID: 0}
+  returnToThisScene: 6
+  backButton: {fileID: 1379365695}
   level: 0
 --- !u!114 &1483126061
 MonoBehaviour:

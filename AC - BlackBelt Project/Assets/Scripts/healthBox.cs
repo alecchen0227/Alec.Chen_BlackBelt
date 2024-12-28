@@ -22,7 +22,7 @@ public class healthBox : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(touchingHeart.health < 7)
+            if(touchingHeart.health < 1)
             {
                 Instantiate(noiseMaker, transform.position, Quaternion.identity);
                 Destroy(gameObject);

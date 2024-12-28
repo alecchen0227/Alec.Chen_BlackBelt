@@ -11,11 +11,13 @@ public class EnemyHP : MonoBehaviour
     public PlayerEnemyCollision checker;
     public ParticleSystem particles;
     public ParticleSystem deathParticles;
+    public VisualIndicator visualIndicator;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = Object.FindObjectOfType<GameManager>();
         checker = Object.FindObjectOfType<PlayerEnemyCollision>();
+        visualIndicator = Object.FindObjectOfType<VisualIndicator>();
     }
 
     // Update is called once per frame
@@ -28,11 +30,12 @@ public class EnemyHP : MonoBehaviour
             {
                 Instantiate(healthbox, transform.position, Quaternion.identity);
             }
+            visualIndicator.spawnTextRegular();
             die();
             gameManager.scoreNumber += 10;
             gameManager.money += 10;
             gameManager.zombiesKilled++;
-
+            
         }
     }
 
