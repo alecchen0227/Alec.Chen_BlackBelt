@@ -1468,7 +1468,7 @@ Transform:
   m_GameObject: {fileID: 259282808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.17, y: 0, z: 32.38}
+  m_LocalPosition: {x: -16.62, y: 0, z: -18.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3216,7 +3216,7 @@ Transform:
   m_GameObject: {fileID: 480768152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.52, y: 0, z: -41.28}
+  m_LocalPosition: {x: 1.9, y: 0, z: -18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3974,7 +3974,7 @@ Transform:
   m_GameObject: {fileID: 591025799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.26, y: 0, z: 1.098}
+  m_LocalPosition: {x: -15.82, y: 0, z: -10.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5130,6 +5130,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a225e6e64ccd70b4da5fc47704c1be73, type: 3}
+--- !u!114 &779189004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6674790020147505190, guid: a225e6e64ccd70b4da5fc47704c1be73, type: 3}
+  m_PrefabInstance: {fileID: 779189003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &781074120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6348,6 +6359,10 @@ PrefabInstance:
       propertyPath: health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7133314700117861489, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
+      propertyPath: redTint
+      value: 
+      objectReference: {fileID: 779189004}
     - target: {fileID: 7133314700117861489, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
       propertyPath: healthbar
       value: 
@@ -8023,7 +8038,7 @@ Transform:
   m_GameObject: {fileID: 1363916455}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.74, y: 0, z: 7.54}
+  m_LocalPosition: {x: 4.46, y: 0, z: -11.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

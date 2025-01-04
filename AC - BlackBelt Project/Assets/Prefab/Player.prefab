@@ -144,10 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   health: 1
-  timer: 1
   scene:
     m_Handle: 0
   healthbar: {fileID: 0}
+  redTint: {fileID: 0}
 --- !u!82 &3021552008992758597
 AudioSource:
   m_ObjectHideFlags: 0

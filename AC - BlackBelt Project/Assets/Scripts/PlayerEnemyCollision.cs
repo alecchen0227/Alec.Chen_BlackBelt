@@ -12,6 +12,7 @@ public class PlayerEnemyCollision : MonoBehaviour
     public Scene scene;
     public Image healthbar;
     public Image redTint;
+    private float alphaTransparency;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +28,19 @@ public class PlayerEnemyCollision : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(health <= 0)
+        healthbar.fillAmount = health;
+        if (health <= 0)
         {
             checkScore();
             SceneManager.LoadScene(11);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        healthbar.fillAmount = health;
+        if(redTint.color.a > 0)
+        {
+            alphaTransparency -= 0.001f;
+            redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,8 +49,10 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             if (timer >= 1)
             {
-                health -= 0.125f;
                 timer = 0;
+                health -= 0.125f;
+                alphaTransparency = 0.5f;
+                redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
             }
         }
 
@@ -52,9 +60,10 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             if (timer >= 1)
             {
-                health -= 0.25f;
-                redTint.color.a = 1;
                 timer = 0;
+                health -= 0.25f;
+                alphaTransparency = 0.5f;
+                redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
             }
         }
     }

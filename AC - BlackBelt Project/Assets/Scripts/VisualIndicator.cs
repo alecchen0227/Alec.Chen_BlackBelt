@@ -24,7 +24,6 @@ public class VisualIndicator : MonoBehaviour
         int y = Random.Range(-200, 200);
         GameObject visual = Instantiate(smallVisual, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
         visual.transform.SetParent(GameObject.FindGameObjectWithTag("canvas").transform, false);
-        print("working");
     }
 
     public void spawnTextBig()
@@ -33,6 +32,5 @@ public class VisualIndicator : MonoBehaviour
         int y = Random.Range(-200, 200);
         GameObject visual = Instantiate(bigVisual, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
         visual.transform.SetParent(GameObject.FindGameObjectWithTag("canvas").transform, false);
-        print("working2");
     }
 }

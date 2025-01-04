@@ -2085,7 +2085,7 @@ Transform:
   m_GameObject: {fileID: 259282808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.2, y: 0, z: 70.9}
+  m_LocalPosition: {x: 91.5, y: 0, z: 110.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3869,7 +3869,7 @@ Transform:
   m_GameObject: {fileID: 480768152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -64.5}
+  m_LocalPosition: {x: -70.91, y: 0, z: -121.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4423,7 +4423,7 @@ Transform:
   m_GameObject: {fileID: 591025799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.1, y: 0, z: 2.5}
+  m_LocalPosition: {x: 93.38, y: 0, z: -123.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8611,6 +8611,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: a4fb1c13c6a48c746a1281511bdfc99f, type: 3}
+--- !u!114 &1147476866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6674790020147505190, guid: a225e6e64ccd70b4da5fc47704c1be73, type: 3}
+  m_PrefabInstance: {fileID: 2810046133825658380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1159406731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9868,7 +9879,7 @@ Transform:
   m_GameObject: {fileID: 1363916455}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.8, y: 0, z: 33.7}
+  m_LocalPosition: {x: -70.4, y: 0, z: 105.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10102,6 +10113,10 @@ PrefabInstance:
       propertyPath: health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7133314700117861489, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
+      propertyPath: redTint
+      value: 
+      objectReference: {fileID: 1147476866}
     - target: {fileID: 7133314700117861489, guid: 8324da2a178e5be47bdba1b608258a80, type: 3}
       propertyPath: healthbar
       value: 
