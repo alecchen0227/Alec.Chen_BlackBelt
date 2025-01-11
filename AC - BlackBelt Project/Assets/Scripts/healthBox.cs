@@ -9,7 +9,7 @@ public class healthBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        touchingHeart = Object.FindObjectOfType<PlayerEnemyCollision>();
+        touchingHeart = Object.FindObjectOfType<PlayerEnemyCollision>(); // Takes a reference to the player
     }
 
     // Update is called once per frame
@@ -20,14 +20,11 @@ public class healthBox : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) // If the healthbox touches the player
         {
-            if(touchingHeart.health < 1)
-            {
-                Instantiate(noiseMaker, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                touchingHeart.health+=0.125f;
-            }
+            Instantiate(noiseMaker, transform.position, Quaternion.identity); // Create a sound
+            Destroy(gameObject); // Destroy the health gameObject
+            touchingHeart.health += 0.125f; // Increase the player's hp
         }
     }
 }

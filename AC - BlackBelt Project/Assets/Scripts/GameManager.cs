@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scene = SceneManager.GetActiveScene();
+        scene = SceneManager.GetActiveScene(); // Make scene this scene
         PlayerPrefs.GetInt("PreviousLevel", 0);
         PlayerPrefs.GetInt("Level1Finish", 0);
         PlayerPrefs.GetInt("Level2Finish", 0);
@@ -42,11 +42,8 @@ public class GameManager : MonoBehaviour
 
     void removeScroll()
     {
-        scroll.SetActive(false);
+        scroll.SetActive(false); // removes the scroll in endless mode after 10 seconds
     }
-    //getridofmsg
-    // if(goal != null)
-    // goal.Setactive(false)
     // Update is called once per frame
     void Update()
     {
@@ -63,51 +60,31 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        moneyChecker.text = "$" + money;
+        moneyChecker.text = "$" + money; // Update the amount of money
         timer += Time.deltaTime;
-        if (timer >= timerChanger)
+        if (timer >= timerChanger) // After an x number of seconds, go to creator method
         {
             creator();
             timer = 0;
         }
 
-        if (scene.name == "Endless")
+        if (zombiesKilled == waveNumber * 10) // On endless, there are waves, it changes every 10 kills
         {
-            if (zombiesKilled == waveNumber * 10)
+            waveNumber++;
+            timerChanger -= 0.2f; // Decrease the timer that it takes to spawn enemies
+            if (waveNumber % 5 == 0) // Create a large enemy every 5 waves. Every 5 waves, the number of large enemies will increase by 10. i.e. 2 large enemies on wave 10
             {
-                waveNumber++;
-                timerChanger -= 0.2f;
-                Invoke("waveDisappear", 3);
-                if (waveNumber % 5 == 0)
+                for (int i = 0; i < numberOfBiggies; i++)
                 {
-                    for (int i = 0; i < numberOfBiggies; i++)
-                    {
-                        int spawnerNumber = Random.Range(0, spawner.Length);
-                        Instantiate(largeEnemy, spawner[spawnerNumber].transform.position, Quaternion.identity);
-                    }
-                    numberOfBiggies++;
+                    int spawnerNumber = Random.Range(0, spawner.Length);
+                    Instantiate(largeEnemy, spawner[spawnerNumber].transform.position, Quaternion.identity);
                 }
+                numberOfBiggies++;
             }
         }
-        else
-        {
-            if (zombiesKilled == waveNumber * 10)
-            {
-                waveNumber++;
-                timerChanger -= 0.2f;
-                if (waveNumber % 5 == 0)
-                {
-                    for (int i = 0; i < numberOfBiggies; i++)
-                    {
-                        int spawnerNumber = Random.Range(0, spawner.Length);
-                        Instantiate(largeEnemy, spawner[spawnerNumber].transform.position, Quaternion.identity);
-                    }
-                    numberOfBiggies++;
-                }
-            }
-        }
-
-        if(scene.name == "Level 1" && scoreNumber >= 500)
+        // When the player beats the level, take player to winning map and make a next level button except for level 3
+        // PreviousLevel playerPref takes the value and transitions the player to the next level
+        if (scene.name == "Level 1" && scoreNumber >= 500) 
         {
             PlayerPrefs.SetInt("Level1Finish", 1);
             PlayerPrefs.SetInt("Button", 0);
@@ -137,15 +114,15 @@ public class GameManager : MonoBehaviour
 
     public void creator()
     {
-        int spawnerNumber = Random.Range(0, spawner.Length);
-        int enemyType = Random.Range(0, 25);
+        int spawnerNumber = Random.Range(0, spawner.Length); // Picks either spawner 1, 2, 3, or 4
+        int enemyType = Random.Range(0, 25); // Spawns an enemy
         if(enemyType == 12)
         {
-            Instantiate(largeEnemy, spawner[spawnerNumber].transform.position, Quaternion.identity);
+            Instantiate(largeEnemy, spawner[spawnerNumber].transform.position, Quaternion.identity); // If enemyType is 12, it will spawn a large enemy
         }
         else
         {
-             Instantiate(enemies, spawner[spawnerNumber].transform.position, Quaternion.identity);
+             Instantiate(enemies, spawner[spawnerNumber].transform.position, Quaternion.identity); // Otherwise spawn regular enemies
         }
     }
 }

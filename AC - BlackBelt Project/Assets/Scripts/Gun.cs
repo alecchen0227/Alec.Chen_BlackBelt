@@ -135,6 +135,7 @@ public class Gun : MonoBehaviour
         // caculate direction from attackpoint to targetpoint
         Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
 
+        // If currentSpread is less than the maximum spread of the gun, then increase the spread based on the spreadMultiplier of that gun 
         if(currentSpread <= maxSpread)
         {
             currentSpread += spreadMultiplier;
@@ -175,12 +176,14 @@ public class Gun : MonoBehaviour
             allowInvoke = false;
         }
     }
+    // Sets ready to shoot to true after the indicated timeBetween each shot
     private void ResetShot()
     {
         readyToShoot = true;
         allowInvoke = true;
     }
 
+    // makes reloading true, rotates the gun to indicate reloading, and plays a sound
     private void Reload()
     {
         reloading = true;
@@ -189,7 +192,7 @@ public class Gun : MonoBehaviour
         Source.Play();
         Invoke("ReloadFinished", reloadTime);
     }
-
+    // This method is called to indicate finish reloading based on the reloading time of the gun
     private void ReloadFinished()
     {
         transform.Rotate(45, 0, 0);

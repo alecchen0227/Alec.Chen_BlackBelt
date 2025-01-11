@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// This script plays the source after a healthbox is collected. It will play the sound and then destroy itself after 3 seconds
 public class Noise : MonoBehaviour
 {
     AudioSource source;

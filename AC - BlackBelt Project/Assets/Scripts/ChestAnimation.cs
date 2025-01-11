@@ -21,7 +21,7 @@ public class ChestAnimation : MonoBehaviour
         openedChest();
     }
 
-    void closedChest()
+    void closedChest() // The chest is closed when weaponManager.Timer is 0 or less
     {
         if(weaponManager.Timer <= 0)
         {
@@ -30,7 +30,7 @@ public class ChestAnimation : MonoBehaviour
         }
     }
 
-    void openedChest()
+    void openedChest() // When the player opens the chest, the timer becomes 5 which changes the chest to opened for 5 seconds before closing
     {
         if (weaponManager.Timer > 0)
         {

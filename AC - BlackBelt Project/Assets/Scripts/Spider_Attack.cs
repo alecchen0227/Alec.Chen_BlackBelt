@@ -19,7 +19,7 @@ public class Spider_Attack : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player"))
+        if (PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player")) // WHen the enemy touches the player, it will play an attack animation
         {
             animator.Play("Attack");
         }

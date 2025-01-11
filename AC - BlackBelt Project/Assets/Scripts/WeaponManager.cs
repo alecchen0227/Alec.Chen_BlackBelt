@@ -46,12 +46,13 @@ public class WeaponManager : MonoBehaviour
         {
             Timer -= Time.deltaTime;
         }
-        if(checker == true && Timer <= 0)
+        if(checker == true && Timer <= 0) // If the 5 second timer is at 0 or less.
         {
-            lootBoxChecker.text = "Press [E] to spend $100 for a random gun";
-            if (Input.GetKeyDown(ChangeWeapon) && gameManager.money >= 100)
+            lootBoxChecker.text = "Press [E] to spend $100 for a random gun"; // Project this text
+            if (Input.GetKeyDown(ChangeWeapon) && gameManager.money >= 100) // if E is pressed and money is >= 100
             {
-                weaponModel[0].SetActive(false);
+                // Turn off the guns
+                weaponModel[0].SetActive(false); 
                 weaponModel[1].SetActive(false);
                 weaponModel[2].SetActive(false);
                 weaponModel[3].SetActive(false);
@@ -85,15 +86,15 @@ public class WeaponManager : MonoBehaviour
     /// Changes the type of gun you are using
     /// </summary>
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other) // When entering the trigger, set checker to true
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) 
         {
             checker = true;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) // WHen exiting the trigger, set checker to false and remove the text
     {
         lootBoxChecker.text = null;
         checker = false;

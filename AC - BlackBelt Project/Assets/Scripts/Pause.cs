@@ -16,9 +16,10 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // When the player clicks the escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseCondition)
+            if (pauseCondition) // Freeze everything in the back and then set pauseCondition to false
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
@@ -28,12 +29,12 @@ public class Pause : MonoBehaviour
             }
             else
             {
-                unPause();
+                unPause(); // If escape key is pressed again or the buttons on the pause menu, unpause the game
             }
         }
     }
 
-    public void unPause()
+    public void unPause() // This method unfreezes everything
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -42,7 +43,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void returnToMainMenu()
+    public void returnToMainMenu() // This method is called when the player clicks return to main menu in the pause menu
     {
         SceneManager.LoadScene(0);
         pauseCondition = true;

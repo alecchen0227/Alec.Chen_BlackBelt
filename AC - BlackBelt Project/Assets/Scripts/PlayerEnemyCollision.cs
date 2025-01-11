@@ -27,16 +27,16 @@ public class PlayerEnemyCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        healthbar.fillAmount = health;
-        if (health <= 0)
+        timer += Time.deltaTime; // update the timer for player and enemy collision
+        healthbar.fillAmount = health; // keep updating the bar based on health
+        if (health <= 0) // If the player dies it goes to checkScore method
         {
             checkScore();
-            SceneManager.LoadScene(11);
+            SceneManager.LoadScene(11); // Goes to gameover screen
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        if(redTint.color.a > 0)
+        if(redTint.color.a > 0) // Checks if the alpha is greater than 0, if so, decrease it back to 0 slowly
         {
             alphaTransparency -= 0.001f;
             redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
@@ -45,6 +45,7 @@ public class PlayerEnemyCollision : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // Upon collision with an enemy, reset the timer to 0, decrease the player helath, and set the alpha to 0.5f and change the colour of the screen based on the alpha
         if (other.gameObject.CompareTag("Enemy"))
         {
             if (timer >= 1)
@@ -68,7 +69,7 @@ public class PlayerEnemyCollision : MonoBehaviour
         }
     }
 
-    public void checkScore()
+    public void checkScore() // If the scene was endless prior to death, see if any of the values on the highscore can be changed
     {
         if(scene.name == "Endless")
         {

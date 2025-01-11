@@ -15,13 +15,13 @@ public class gunRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)) // When right click is held or pressed
         {
-            gun.GetComponent<Animator>().Play("Gun");
+            gun.GetComponent<Animator>().Play("Gun"); // play the animation which moves the gun to the middle
         }
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(1)) // WHen right click is not held or pressed
         {
-            gun.GetComponent<Animator>().Play("New State");
+            gun.GetComponent<Animator>().Play("New State"); // play the animation which returns the gun to it's original state
         }
     }
 }

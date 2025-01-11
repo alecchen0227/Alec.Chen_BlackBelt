@@ -23,7 +23,7 @@ public class Crab_Attack : MonoBehaviour {
         if(PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player"))
         {
             random = Random.Range(0, 3);
-            switch (random)
+            switch (random) // When the enemy touches my player, it chooses a random attack animation
             {
                  case 0:
                     animator.Play("Attack1");

@@ -1,3 +1,4 @@
+// This script is connected to my small/big killIndicator. It basically despawns the text after 3 seconds
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

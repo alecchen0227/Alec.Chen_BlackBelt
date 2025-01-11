@@ -18,7 +18,7 @@ public class VisualIndicator : MonoBehaviour
 
     }
 
-    public void spawnTextRegular()
+    public void spawnTextRegular() // This method is called in enemyHP. It will position a text in a random position in the canvas for 3 seconds. This happens when an enemy is killed.
     {
         int x = Random.Range(-400, 400);
         int y = Random.Range(-200, 200);
@@ -26,7 +26,7 @@ public class VisualIndicator : MonoBehaviour
         visual.transform.SetParent(GameObject.FindGameObjectWithTag("canvas").transform, false);
     }
 
-    public void spawnTextBig()
+    public void spawnTextBig() // This method is called in largeEnemyHP. It will position a text in a random position in the canvas for 3 seconds. THis happens when an enemy is killed.
     {
         int x = Random.Range(-400, 400);
         int y = Random.Range(-200, 200);

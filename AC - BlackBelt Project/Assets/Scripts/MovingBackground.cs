@@ -20,10 +20,12 @@ public class MovingBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // For the starting screen, move the x position of the background using two backgrounds
         background1.transform.position = new Vector3(x1, background1.transform.position.y, background1.transform.position.z);
         background2.transform.position = new Vector3(x2, background2.transform.position.y, background2.transform.position.z);
         x1 += 1;
         x2 += 1;
+        // This number is hit, change the x value of that background to the changeVariable
         if(x1 >= 2340)
         {
             x1 = changeVariable;

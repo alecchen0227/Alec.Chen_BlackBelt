@@ -12,7 +12,7 @@ public class BulletEnemyCollision : MonoBehaviour
     void Start()
     {
         // Finding an object with this gameManager script
-        gameManager = Object.FindObjectOfType<GameManager>();
+        gameManager = Object.FindObjectOfType<GameManager>(); //Finds an object in the hierarchy with the gameManager script
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class BulletEnemyCollision : MonoBehaviour
         Destroy(gameObject, 3);
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collision) // When the bullet collides with an enemy or an obstacle, destroy the bullet
     {
         if(collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Biggy"))
         {

@@ -19,6 +19,7 @@ public class CrosshairColour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Changes the colour of my crosshair in the game when I change it in the settings or the pause menu
         redNumber = PlayerPrefs.GetFloat("red");
         greenNumber = PlayerPrefs.GetFloat("green");
         blueNumber = PlayerPrefs.GetFloat("blue");

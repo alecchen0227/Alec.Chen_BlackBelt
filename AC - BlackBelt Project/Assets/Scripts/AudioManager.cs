@@ -9,14 +9,14 @@ public class AudioManager : MonoBehaviour
     AudioSource source;
     private void Awake()
     {
-        source = gameObject.GetComponent<AudioSource>();
-        if (instance != null && instance != this)
+        source = gameObject.GetComponent<AudioSource>(); //Grabs the audiosource from this gameObject
+        if (instance != null && instance != this) // When I go back to the main menu, there will be two audio managers. This prevents creating another one.
         {
             Destroy(gameObject);
         }
-        else
+        else 
         {
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // Keep the same audioManager gameObject throughout the whole game.
             instance = this;
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -25,11 +25,11 @@ public class AudioManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
-        if(scene.name == "Level 1" || scene.name == "Level 2" || scene.name == "Level 3" || scene.name == "Endless")
+        if(scene.name == "Level 1" || scene.name == "Level 2" || scene.name == "Level 3" || scene.name == "Endless") // Pause the music when on these levels
         {
             source.Pause();
         }
-        else if(!source.isPlaying)
+        else if(!source.isPlaying) // Otherwise play the music
         {
             source.UnPause();
         }

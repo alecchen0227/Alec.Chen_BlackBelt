@@ -10,11 +10,11 @@ public class Win : MonoBehaviour
     void Start()
     {
         PlayerPrefs.GetInt("Button", 0);
-        if(PlayerPrefs.GetInt("Button") == 1)
+        if(PlayerPrefs.GetInt("Button") == 1) // If it is level 3, the button number is 1 so no next level
         {
             nextLevel.SetActive(false);
         }
-        else
+        else // Otherwise, make the next Level button appear
         {
             nextLevel.SetActive(true);
         }

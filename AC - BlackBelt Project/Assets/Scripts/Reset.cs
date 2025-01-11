@@ -17,7 +17,7 @@ public class Reset : MonoBehaviour
         
     }
 
-    public void ResetLevels()
+    public void ResetLevels() // This method is called when the resetbutton is clicked in the credits scene. It sets all the playerPrefs to 0 basically resetting the levels and then showing a message
     {
         message.SetActive(true);
         PlayerPrefs.SetInt("Level1Finish", 0);

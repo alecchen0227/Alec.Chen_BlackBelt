@@ -20,7 +20,7 @@ public class Orc_Attack : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player"))
+        if (PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player")) // If the enemy touches the enemy, pick a random attack animation
         {
             random = Random.Range(0, 3);
             switch (random)

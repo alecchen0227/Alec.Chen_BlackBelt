@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void ChangeSpeed()
+    private void ChangeSpeed() //This method is called every update and changes the speed of the player if shift is held and stamina is above 0
     {
         if(Input.GetKey(shiftKey) && staminaAmount > 0)
         {
@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         // limit velocity if needed
         if (flatVel.magnitude > moveSpeed)
         {
-            if (stepCounter < clip.Length && soundReady)
+            if (stepCounter < clip.Length && soundReady) // Plays the sound of footsteps every second while the player is moving
             {
                 source.clip = clip[stepCounter];
                 stepCounter++;
@@ -145,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void changeStaminaBar()
+    private void changeStaminaBar() // Updates the stamina bar while shift is not held and stamina is less than 1
     {
         staminaBar.fillAmount = staminaAmount;
         if (!Input.GetKey(shiftKey) && staminaAmount < 1)

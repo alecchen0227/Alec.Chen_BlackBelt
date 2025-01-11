@@ -1,3 +1,4 @@
+// Not my script, I took it from online
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -15,6 +15,6 @@ public class CameraPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = cameraPosition.position;
+        transform.position = cameraPosition.position; // Changes the camera's position based on the player's position
     }
 }

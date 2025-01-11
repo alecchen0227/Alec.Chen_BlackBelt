@@ -25,13 +25,13 @@ public class ColourModifier : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   // Changes the value of my RGB based on the value of the slider
         crosshair.GetComponent<TMP_Text>().color = new Color(color.r, color.g, color.b);
         redValue.text = "" + red.value;
         greenValue.text = "" + green.value;
         blueValue.text = "" + blue.value;
     }
-
+    // This method is connected to my sliders which changes the colour whenever it is changed.
     public void ChangeColour(int colourChoice)
     {
         if(colourChoice == 0)

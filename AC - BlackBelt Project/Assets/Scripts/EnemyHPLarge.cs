@@ -1,3 +1,4 @@
+// Same concept as EnemyHP.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

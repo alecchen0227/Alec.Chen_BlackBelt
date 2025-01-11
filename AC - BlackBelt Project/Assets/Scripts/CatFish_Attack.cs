@@ -22,8 +22,8 @@ public class CatFish_Attack : MonoBehaviour
     {
         if(PlayerEnemyCollision.timer >= 1 && other.gameObject.CompareTag("Player"))
         {
-            random = Random.Range(0, 2);
-            switch (random)
+            random = Random.Range(0, 2); 
+            switch (random) // When the enemy touches player, it picks a random attack animation
             {
                 case 0:
                     animator.Play("Attack1");

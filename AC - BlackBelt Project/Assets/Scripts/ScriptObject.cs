@@ -2,7 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
 public class ScriptObject : ScriptableObject
-{
+{   // Data for weapons
     public string gunName;
     public float timeBetweenShooting;
     public float startingSpread;
