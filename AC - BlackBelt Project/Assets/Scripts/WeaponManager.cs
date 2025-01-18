@@ -61,9 +61,9 @@ public class WeaponManager : MonoBehaviour
                 int option = Random.Range(0, gunTypes.Length);
                 while (option == gunNumber.currentGun)
                 {
-                    option = Random.Range(0, gunTypes.Length);
+                    option = Random.Range(0, gunTypes.Length); // Make sure option is not the same gun as the current gun
                 }
-                // Change Gun Stat and Name 
+                // Change Gun Stat and Name to the new gun stats
                 gunnName.text = gunTypes[option].gunName;
                 weaponModel[option].SetActive(true);
                 gun.GetComponent<Gun>().timeBetweenShooting = gunTypes[option].timeBetweenShooting;
@@ -76,8 +76,8 @@ public class WeaponManager : MonoBehaviour
                 gun.GetComponent<Gun>().bulletsLeft = gunTypes[option].magazineSize;
                 gun.GetComponent<Gun>().damageValue = gunTypes[option].damageValue;
                 gun.GetComponent<Gun>().numberOfBullets = gunTypes[option].numberOfBullets;
-                gunNumber.currentGun = option;
-                gameManager.money -= 100;
+                gunNumber.currentGun = option; // Switch current gun to option
+                gameManager.money -= 100; // Take out money
                 Timer += 5;
             }
         }
