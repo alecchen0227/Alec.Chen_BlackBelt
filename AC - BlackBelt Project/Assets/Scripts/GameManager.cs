@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawner;
     public GameObject largeEnemy;
     public GameObject scroll;
+    public TMP_Text scrollText;
     float timer = 0;
     public int waveNumber = 1;
     public float timerChanger;
@@ -31,11 +32,15 @@ public class GameManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene(); // Make scene this scene
         PlayerPrefs.GetInt("PreviousLevel", 0);
-        PlayerPrefs.GetInt("Level1Finish", 0);
-        PlayerPrefs.GetInt("Level2Finish", 0);
-        PlayerPrefs.GetInt("Level3Finish", 0);
-        if(scroll != null)
+        PlayerPrefs.GetInt("HighestLevel", 0);
+        if(scene.name == "Endless")
         {
+            scrollText.text = "Survive as Many Waves as Possible!";
+            Invoke("removeScroll", 10);
+        }
+        else
+        {
+            scrollText.text = "Gather 500 Points to Win!";
             Invoke("removeScroll", 10);
         }
     }
@@ -86,7 +91,7 @@ public class GameManager : MonoBehaviour
         // PreviousLevel playerPref takes the value and transitions the player to the next level
         if (scene.name == "Level 1" && scoreNumber >= 500) 
         {
-            PlayerPrefs.SetInt("Level1Finish", 1);
+            PlayerPrefs.SetInt("HighestLevel", 2);
             PlayerPrefs.SetInt("Button", 0);
             PlayerPrefs.SetInt("PreviousLevel", 8);
             SceneManager.LoadScene(12);
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour
         }
         else if (scene.name == "Level 2" && scoreNumber >= 500)
         {
-            PlayerPrefs.SetInt("Level2Finish", 1);
+            PlayerPrefs.SetInt("HighestLevel", 3);
             PlayerPrefs.SetInt("Button", 0);
             PlayerPrefs.SetInt("PreviousLevel", (int)SceneTransition.LevelNumbers.Level2);
             SceneManager.LoadScene(12);
@@ -104,7 +109,7 @@ public class GameManager : MonoBehaviour
         }
         else if (scene.name == "Level 3" && scoreNumber >= 500)
         {
-            PlayerPrefs.SetInt("Level3Finish", 1);
+            PlayerPrefs.SetInt("HighestLevel", 4);
             PlayerPrefs.SetInt("Button", 1);
             SceneManager.LoadScene(12);
             Cursor.lockState = CursorLockMode.None;

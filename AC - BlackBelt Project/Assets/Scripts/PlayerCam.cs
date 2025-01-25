@@ -24,10 +24,10 @@ public class PlayerCam : MonoBehaviour
     void Update()
     {
         // Update the new mouse sensitivity
-        sens = PlayerPrefs.GetFloat("currentSensitivity", 200);
+        sens = PlayerPrefs.GetFloat("currentSensitivity", 1);
         // Get Mouse Input
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens;
+        float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sens * 200;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sens * 200;
 
         yRotation += mouseX;
         xRotation -= mouseY;

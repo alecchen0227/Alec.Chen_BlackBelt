@@ -13,15 +13,16 @@ public class PlayerEnemyCollision : MonoBehaviour
     public Image healthbar;
     public Image redTint;
     private float alphaTransparency;
+    public List<int> scoreArray = new List<int>();
     // Start is called before the first frame update
     void Start()
     {
         scene = SceneManager.GetActiveScene();
-        PlayerPrefs.GetInt("First", 0);
-        PlayerPrefs.GetInt("Second", 0);
-        PlayerPrefs.GetInt("Third", 0);
-        PlayerPrefs.GetInt("Fourth", 0);
-        PlayerPrefs.GetInt("Fifth", 0);
+        scoreArray.Add(PlayerPrefs.GetInt("First", 0));
+        scoreArray.Add(PlayerPrefs.GetInt("Second", 0));
+        scoreArray.Add(PlayerPrefs.GetInt("Third", 0));
+        scoreArray.Add(PlayerPrefs.GetInt("Fourth", 0));
+        scoreArray.Add(PlayerPrefs.GetInt("Fifth", 0));
     }
 
     // Update is called once per frame
@@ -73,36 +74,14 @@ public class PlayerEnemyCollision : MonoBehaviour
     {
         if(scene.name == "Endless")
         {
-            if (gameManager.scoreNumber >= PlayerPrefs.GetInt("First"))
-            {
-                PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
-                PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
-                PlayerPrefs.SetInt("Third", PlayerPrefs.GetInt("Second"));
-                PlayerPrefs.SetInt("Second", PlayerPrefs.GetInt("First"));
-                PlayerPrefs.SetInt("First", gameManager.scoreNumber);
-            }
-            else if (gameManager.scoreNumber >= PlayerPrefs.GetInt("Second"))
-            {
-                PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
-                PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
-                PlayerPrefs.SetInt("Third", PlayerPrefs.GetInt("Second"));
-                PlayerPrefs.SetInt("Second", gameManager.scoreNumber);
-            }
-            else if (gameManager.scoreNumber >= PlayerPrefs.GetInt("Third"))
-            {
-                PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
-                PlayerPrefs.SetInt("Fourth", PlayerPrefs.GetInt("Third"));
-                PlayerPrefs.SetInt("Third", gameManager.scoreNumber);
-            }
-            else if (gameManager.scoreNumber >= PlayerPrefs.GetInt("Fourth"))
-            {
-                PlayerPrefs.SetInt("Fifth", PlayerPrefs.GetInt("Fourth"));
-                PlayerPrefs.SetInt("Fourth", gameManager.scoreNumber);
-            }
-            else if (gameManager.scoreNumber >= PlayerPrefs.GetInt("Fifth"))
-            {
-                PlayerPrefs.SetInt("Fifth", gameManager.scoreNumber);
-            }
+            scoreArray.Add(gameManager.scoreNumber);
+            scoreArray.Sort();
+
+            PlayerPrefs.SetInt("Fifth", scoreArray[4]);
+            PlayerPrefs.SetInt("Fourth", scoreArray[3]);
+            PlayerPrefs.SetInt("Third", scoreArray[2]);
+            PlayerPrefs.SetInt("Second", scoreArray[1]);
+            PlayerPrefs.SetInt("First", scoreArray[0]);
         }
     }
 }
