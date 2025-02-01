@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,12 +12,14 @@ public class PlayerEnemyCollision : MonoBehaviour
     public static float timer = 0;
     public Scene scene;
     public Image healthbar;
-    public Image redTint;
-    private float alphaTransparency;
+    public Vignette vignette;
+    public PostProcessVolume volume;
     public List<int> scoreArray = new List<int>();
     // Start is called before the first frame update
     void Start()
     {
+        volume.profile.TryGetSettings(out vignette);
+        vignette.intensity.value = 0;
         scene = SceneManager.GetActiveScene();
         scoreArray.Add(PlayerPrefs.GetInt("First", 0));
         scoreArray.Add(PlayerPrefs.GetInt("Second", 0));
@@ -37,10 +40,9 @@ public class PlayerEnemyCollision : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        if(redTint.color.a > 0) // Checks if the alpha is greater than 0, if so, decrease it back to 0 slowly
+        if(vignette.intensity > 0)
         {
-            alphaTransparency -= 0.001f;
-            redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
+            vignette.intensity.value -= 0.001f;
         }
     }
 
@@ -49,24 +51,12 @@ public class PlayerEnemyCollision : MonoBehaviour
         // Upon collision with an enemy, reset the timer to 0, decrease the player helath, and set the alpha to 0.5f and change the colour of the screen based on the alpha
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (timer >= 1)
-            {
-                timer = 0;
-                health -= 0.125f;
-                alphaTransparency = 0.5f;
-                redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
-            }
+            collision(0.125f);
         }
 
         if (other.gameObject.CompareTag("Biggy"))
         {
-            if (timer >= 1)
-            {
-                timer = 0;
-                health -= 0.25f;
-                alphaTransparency = 0.5f;
-                redTint.color = new Color(redTint.color.r, redTint.color.g, redTint.color.b, alphaTransparency);
-            }
+            collision(0.25f);
         }
     }
 
@@ -76,12 +66,21 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             scoreArray.Add(gameManager.scoreNumber);
             scoreArray.Sort();
-
             PlayerPrefs.SetInt("Fifth", scoreArray[4]);
             PlayerPrefs.SetInt("Fourth", scoreArray[3]);
             PlayerPrefs.SetInt("Third", scoreArray[2]);
             PlayerPrefs.SetInt("Second", scoreArray[1]);
             PlayerPrefs.SetInt("First", scoreArray[0]);
+        }
+    }
+
+    public void collision(float subtractHealth)
+    {
+        if (timer >= 1)
+        {
+            timer = 0;
+            health -= subtractHealth;
+            vignette.intensity.value = 0.6f;
         }
     }
 }

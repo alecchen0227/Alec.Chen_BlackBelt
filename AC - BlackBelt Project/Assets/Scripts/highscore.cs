@@ -15,10 +15,4 @@ public class highscore : MonoBehaviour
         ranks[3].text = "#4   " + PlayerPrefs.GetInt("Fourth");
         ranks[4].text = "#5   " + PlayerPrefs.GetInt("Fifth");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -11,13 +11,7 @@ public class Reset : MonoBehaviour
         message.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ResetLevels() // This method is called when the resetbutton is clicked in the credits scene. It sets all the playerPrefs to 0 basically resetting the levels and then showing a message
+    public void ResetLevels() // This method is called when the resetbutton is clicked in the credits scene. It sets all the playerPrefs to 0, resetting the levels and then showing a message
     {
         message.SetActive(true);
         PlayerPrefs.SetInt("HighestLevel", 1);
