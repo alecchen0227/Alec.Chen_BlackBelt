@@ -27,7 +27,7 @@ public class EnemyHP : MonoBehaviour
         // When enemy is killed
         if(hp <= 0)
         {
-            int chance = Random.Range(0, 8);
+            int chance = Random.Range(0, 7);
             if(chance == 5 && checker.health < 1)
             {
                 // 1 in 8th chance to instantiate a healthbox

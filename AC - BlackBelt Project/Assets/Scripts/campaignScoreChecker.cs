@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class campaignScoreChecker : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class campaignScoreChecker : MonoBehaviour
         {
             if(i < levelBox.Length)
             {
-                levelBox[i].SetActive(false);
+                levelBox[i].GetComponent<Button>().interactable = false;
                 checker[i].SetActive(false);
             }
         }
@@ -23,7 +24,7 @@ public class campaignScoreChecker : MonoBehaviour
         {
             if(i < levelBox.Length)
             {
-                levelBox[i].SetActive(true);
+                levelBox[i].GetComponent<Button>().interactable = true;
             }
             if (i > 0)
             {

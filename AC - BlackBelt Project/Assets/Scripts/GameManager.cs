@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         {
             waveNumber++;
             timerChanger -= 0.2f; // Decrease the timer that it takes to spawn enemies
-            if (waveNumber % 5 == 0) // Create a large enemy every 5 waves. Every 5 waves, the number of large enemies will increase by 10. i.e. 2 large enemies on wave 10
+            if (waveNumber % 2 == 0) // Create a large enemy every 2 waves. Every 2 waves, the number of large enemies will increase by 1. i.e. 2 large enemies on wave 4
             {
                 for (int i = 0; i < numberOfBiggies; i++)
                 {
