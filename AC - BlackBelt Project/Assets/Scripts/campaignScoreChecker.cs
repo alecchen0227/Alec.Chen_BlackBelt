@@ -11,7 +11,12 @@ public class campaignScoreChecker : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() 
-    {   // Turn all gameObject off first
+    {   
+        if(PlayerPrefs.GetInt("HighestLevel") == 0)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 1);
+        }
+        // Turn all gameObject off first
         for(int i = 0; i < levelBox.Length; i++)
         {
             if(i < levelBox.Length)

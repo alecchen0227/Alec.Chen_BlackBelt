@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene(); // Make scene this scene
         PlayerPrefs.GetInt("PreviousLevel", 0);
-        PlayerPrefs.GetInt("HighestLevel", 0);
+        PlayerPrefs.GetInt("HighestLevel", 1);
         if(scene.name == "Endless")
         {
             scrollText.text = "Survive as Many Waves as Possible!";
