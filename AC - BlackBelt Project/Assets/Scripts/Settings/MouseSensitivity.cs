@@ -11,7 +11,7 @@ public class MouseSensitivity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("currentSensitivity", 1); // Sets the slider's value based on the playerPref of currrentSensitivity
+        slider.value = PlayerPrefs.GetFloat("currentSensitivity", 5); // Sets the slider's value based on the playerPref of currrentSensitivity
     }
 
     // Update is called once per frame

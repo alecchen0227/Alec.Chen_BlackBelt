@@ -17,9 +17,9 @@ public class ColourModifier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        red.value = PlayerPrefs.GetFloat("red");
-        green.value = PlayerPrefs.GetFloat("green");
-        blue.value = PlayerPrefs.GetFloat("blue");
+        red.value = PlayerPrefs.GetFloat("red", 1);
+        green.value = PlayerPrefs.GetFloat("green", 1);
+        blue.value = PlayerPrefs.GetFloat("blue", 1);
         crosshair.GetComponent<TMP_Text>().color = new Color(color.r, color.g, color.b);
     }
 

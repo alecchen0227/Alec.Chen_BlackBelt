@@ -12,7 +12,7 @@ public class MasterVolume : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("volume", 100); // set the volume slider's to the right position
+        volumeSlider.value = PlayerPrefs.GetFloat("volume", 80); // set the volume slider's to the right position
         Volume = volumeSlider.value; // update the number volume based on the slider
         AudioListener.volume = Volume; // Change the overall audio based on the volume variable
     }
