@@ -117,10 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1250
-  healthbox: {fileID: 5820861929234524508, guid: a683fee0658ea444db14d75431525049, type: 3}
+  healthbox: {fileID: 5863318220515013251, guid: 8ac3954d54570154f9efa1aea4375f49, type: 3}
   checker: {fileID: 0}
   particles: {fileID: 7342358039034233401}
   deathParticles: {fileID: 8713391644409791441, guid: 7ad3a415eb9a17a459dfd616dc2a45b4, type: 3}
+  visualIndicator: {fileID: 0}
 --- !u!114 &4958203213653681883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5222,7 +5223,7 @@ PrefabInstance:
     - target: {fileID: 7823708891515688132, guid: 71c2b86e4d7bc49b894c67d7b7a7b83f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e0a30a8f48e231b4eb798cfc607e8da1, type: 2}
+      objectReference: {fileID: 9100000, guid: 3e23f3806e2aec84b9ac32ba6a376b55, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

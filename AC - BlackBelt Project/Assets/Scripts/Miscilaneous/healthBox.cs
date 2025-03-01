@@ -18,9 +18,9 @@ public class healthBox : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player")) // If the healthbox touches the player
+        if (collision.gameObject.CompareTag("Player")) // If the healthbox touches the player
         {
             Instantiate(noiseMaker, transform.position, Quaternion.identity); // Create a sound
             Destroy(gameObject); // Destroy the health gameObject

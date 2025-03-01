@@ -29,7 +29,7 @@ public class EnemyHPLarge : MonoBehaviour
         if (hp <= 0)
         {
             int chance = Random.Range(0, 7);
-            if (chance == 5 && checker.health < 7)
+            if (chance == 5 && checker.health < 1)
             {
                 Instantiate(healthbox, transform.position, Quaternion.identity);
             }

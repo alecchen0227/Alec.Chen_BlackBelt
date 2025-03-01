@@ -117,10 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 150
-  healthbox: {fileID: 5820861929234524508, guid: a683fee0658ea444db14d75431525049, type: 3}
+  healthbox: {fileID: 5863318220515013251, guid: 8ac3954d54570154f9efa1aea4375f49, type: 3}
   checker: {fileID: 0}
   particles: {fileID: 2540210270500267697}
   deathParticles: {fileID: 8713391644409791441, guid: 7ad3a415eb9a17a459dfd616dc2a45b4, type: 3}
+  visualIndicator: {fileID: 0}
 --- !u!114 &7437773632868525525
 MonoBehaviour:
   m_ObjectHideFlags: 0

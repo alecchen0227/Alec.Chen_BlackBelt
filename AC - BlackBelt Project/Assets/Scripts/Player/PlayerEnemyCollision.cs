@@ -66,11 +66,11 @@ public class PlayerEnemyCollision : MonoBehaviour
         {
             scoreArray.Add(gameManager.scoreNumber);
             scoreArray.Sort();
-            PlayerPrefs.SetInt("Fifth", scoreArray[4]);
-            PlayerPrefs.SetInt("Fourth", scoreArray[3]);
-            PlayerPrefs.SetInt("Third", scoreArray[2]);
-            PlayerPrefs.SetInt("Second", scoreArray[1]);
-            PlayerPrefs.SetInt("First", scoreArray[0]);
+            PlayerPrefs.SetInt("Fifth", scoreArray[scoreArray.Count-5]);
+            PlayerPrefs.SetInt("Fourth", scoreArray[scoreArray.Count-4]);
+            PlayerPrefs.SetInt("Third", scoreArray[scoreArray.Count-3]);
+            PlayerPrefs.SetInt("Second", scoreArray[scoreArray.Count-2]);
+            PlayerPrefs.SetInt("First", scoreArray[scoreArray.Count-1]);
         }
     }
 
