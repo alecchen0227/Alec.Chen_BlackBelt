@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public float timerChanger;
     public int zombiesKilled = 0;
     public int numberOfBiggies = 1;
-    public int money = 0;
     public TMP_Text moneyChecker;
     /*
      Increase score when an enemy dies from projectile
@@ -65,7 +64,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        moneyChecker.text = "$" + money; // Update the amount of money
         timer += Time.deltaTime;
         if (timer >= timerChanger) // After an x number of seconds, go to creator method
         {

@@ -36,7 +36,6 @@ public class EnemyHPLarge : MonoBehaviour
             visualIndicator.spawnTextBig();
             die();
             gameManager.scoreNumber += 50;
-            gameManager.money += 50;
             gameManager.zombiesKilled++;
         }
     }

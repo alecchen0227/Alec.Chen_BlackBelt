@@ -48,8 +48,8 @@ public class WeaponManager : MonoBehaviour
         }
         if(checker == true && Timer <= 0) // If the 5 second timer is at 0 or less.
         {
-            lootBoxChecker.text = "Press [E] to spend $100 for a random gun"; // Project this text
-            if (Input.GetKeyDown(ChangeWeapon) && gameManager.money >= 100) // if E is pressed and money is >= 100
+            lootBoxChecker.text = "Press [E] to use 100 points for a random gun"; // Project this text
+            if (Input.GetKeyDown(ChangeWeapon) && gameManager.scoreNumber >= 100) // if E is pressed and money is >= 100
             {
                 // Turn off the guns
                 weaponModel[0].SetActive(false); 
@@ -77,7 +77,7 @@ public class WeaponManager : MonoBehaviour
                 gun.GetComponent<Gun>().damageValue = gunTypes[option].damageValue;
                 gun.GetComponent<Gun>().numberOfBullets = gunTypes[option].numberOfBullets;
                 gunNumber.currentGun = option; // Switch current gun to option
-                gameManager.money -= 100; // Take out money
+                gameManager.scoreNumber -= 100; // Take out score
                 Timer += 5;
             }
         }

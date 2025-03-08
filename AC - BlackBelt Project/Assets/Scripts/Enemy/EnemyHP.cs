@@ -37,7 +37,6 @@ public class EnemyHP : MonoBehaviour
             die();
             // update the number in the gameManager
             gameManager.scoreNumber += 10;
-            gameManager.money += 10;
             gameManager.zombiesKilled++;
             
         }
