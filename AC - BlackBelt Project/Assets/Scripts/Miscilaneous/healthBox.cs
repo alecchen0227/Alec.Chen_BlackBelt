@@ -22,9 +22,12 @@ public class healthBox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // If the healthbox touches the player
         {
+            if(touchingHeart.health < 1)
+            {
+                touchingHeart.health += 0.125f; // Increase the player's hp
+            }
             Instantiate(noiseMaker, transform.position, Quaternion.identity); // Create a sound
             Destroy(gameObject); // Destroy the health gameObject
-            touchingHeart.health += 0.125f; // Increase the player's hp
         }
     }
 }
